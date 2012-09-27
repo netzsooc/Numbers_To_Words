@@ -1,6 +1,8 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
 
+'''This program transforms integers to words in Spanish'''
+
 ONES = {0: '', 1: 'UN ', 2: 'DOS ', 3: 'TRES ', 4: 'CUATRO ', 5: 'CINCO ',
         6: 'SEIS ', 7: 'SIETE ', 8: 'OCHO ', 9: 'NUEVE ', 10: 'DIEZ ',
         11: 'ONCE ', 12: 'DOCE ', 13: 'TRECE ', 14: 'CATORCE ', 15: 'QUINCE ',
@@ -16,6 +18,7 @@ HUNDREDS = {1: 'CIENTO ', 2: 'DOSCIENTOS ', 3: 'TRESCIENTOS ',
 
 
 def num_to_let(number):
+    '''Function that transforms numbers up to (10 ** 12) - 1 or 999999999999'''
     n0 = number / 10 ** 6
     n1 = number % 10 ** 6
     ht0 = n0 / 1000
@@ -46,6 +49,7 @@ def num_to_let(number):
 
 
 def first_pass(number):
+    '''function that transforms numbers from 1-999 to words in Spanish'''
     if number == 100:
         return 'CIEN '
     if number <= 20:
