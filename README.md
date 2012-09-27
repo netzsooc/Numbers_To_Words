@@ -1,4 +1,5 @@
-CommandProcessing
+Number_To_Letters
 =================
 
-should process natural language commands to extract specific information
+A simple python script to transform numbers to words in Spanish. You are free
+to fork this project, or to use it as a script for LibreOffice calc.
